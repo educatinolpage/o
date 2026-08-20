@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZERO TO HERO (TRADING)</title>
   
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel Code (Initialized only, no PageView) -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,14 +16,9 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
-    // Pixel Init & PageView Event
+    // Pixel Init (PageView removed as requested)
     fbq('init', '832572663183096');
-    fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=832572663183096&ev=PageView&noscript=1"/>
-  </noscript>
   <!-- End Meta Pixel Code -->
 
   <style>
@@ -206,7 +201,7 @@
     </p>
   </div>
 
-  <!-- Meta Pixel Click Tracking Script -->
+  <!-- Meta Pixel Event Tracking Script -->
   <script>
     document.getElementById('telegramBtn').addEventListener('click', function() {
       if (typeof fbq === 'function') {
