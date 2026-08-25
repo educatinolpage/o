@@ -219,29 +219,45 @@
     </p>
   </div>
 
-  <!-- JavaScript Section -->
+  <!-- JavaScript Section (Global Real-Time Counter) -->
   <script>
     const telegramBtn = document.getElementById('telegramBtn');
     const counterDisplay = document.getElementById('clickCounter');
     const telegramUrl = "https://t.me/+gTJjNwFB8YAzZjNl";
 
-    // Counter Initialization (0 to 100 Reset Logic)
-    let currentCount = parseInt(localStorage.getItem('tg_click_count')) || 0;
-    counterDisplay.innerText = currentCount;
+    // Free Global CountAPI endpoints
+    const namespace = "gujaratitrader_zerotohero";
+    const key = "telegram_clicks";
+    const getUrl = `https://api.countapi.xyz/get/${namespace}/${key}`;
+    const hitUrl = `https://api.countapi.xyz/hit/${namespace}/${key}`;
 
+    // 1. Initial Total Clicks Fetch from Server
+    fetch(getUrl)
+      .then(res => res.json())
+      .then(data => {
+        let total = (data.value || 0) % 101; // 0 to 100 Loop Logic
+        counterDisplay.innerText = total;
+      })
+      .catch(() => {
+        counterDisplay.innerText = "0";
+      });
+
+    // 2. Increment Global Counter on Click
     telegramBtn.addEventListener('click', function() {
-      // 1. Meta Pixel Event
       if (typeof fbq === 'function') {
         fbq('track', 'Subscribe');
       }
 
-      // 2. Increment Counter
-      currentCount++;
-      if (currentCount > 100) {
-        currentCount = 0;
-      }
-      localStorage.setItem('tg_click_count', currentCount);
-      counterDisplay.innerText = currentCount;
+      fetch(hitUrl)
+        .then(res => res.json())
+        .then(data => {
+          let total = (data.value || 0) % 101;
+          counterDisplay.innerText = total;
+        })
+        .catch(() => {
+          let current = parseInt(counterDisplay.innerText) || 0;
+          counterDisplay.innerText = (current + 1) % 101;
+        });
     });
 
     // 3. 5 Seconds Auto-Redirect Timer
