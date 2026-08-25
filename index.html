@@ -16,7 +16,7 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
-    // Pixel Init (PageView removed as requested)
+    // Pixel Init
     fbq('init', '832572663183096');
   </script>
   <!-- End Meta Pixel Code -->
@@ -131,6 +131,18 @@
       transform: scale(0.98);
     }
 
+    /* Counter Badge Inside Button */
+    .click-counter {
+      background-color: #ffffff;
+      color: #3b62d1;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: 12px;
+      margin-left: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
     @keyframes pulse-glow {
       0% {
         transform: scale(1);
@@ -185,12 +197,13 @@
     <!-- Category Description -->
     <p class="description">Nifty , Options, Stocks , Forex , Crypto It's Works in All Segment</p>
 
-    <!-- Glowing Telegram Button -->
-    <a href="https://t.me/+gTJjNwFB8YAzZjNl" id="telegramBtn" class="btn-telegram">
+    <!-- Glowing Telegram Button with Counter Badge -->
+    <a href="https://t.me/+gTJjNwFB8YAzZjNl" id="telegramBtn" class="btn-telegram" target="_blank">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
       </svg>
       <span>Join on Telegram</span>
+      <span id="clickCounter" class="click-counter">0</span>
     </a>
 
     <div class="divider"></div>
@@ -201,13 +214,35 @@
     </p>
   </div>
 
-  <!-- Meta Pixel Event Tracking Script -->
+  <!-- JavaScript Section -->
   <script>
-    document.getElementById('telegramBtn').addEventListener('click', function() {
+    const telegramBtn = document.getElementById('telegramBtn');
+    const counterDisplay = document.getElementById('clickCounter');
+    const telegramUrl = "https://t.me/+gTJjNwFB8YAzZjNl";
+
+    // Counter Initialization (0 to 100 Reset Logic)
+    let currentCount = parseInt(localStorage.getItem('tg_click_count')) || 0;
+    counterDisplay.innerText = currentCount;
+
+    telegramBtn.addEventListener('click', function() {
+      // 1. Meta Pixel Event
       if (typeof fbq === 'function') {
         fbq('track', 'Subscribe');
       }
+
+      // 2. Increment Counter
+      currentCount++;
+      if (currentCount > 100) {
+        currentCount = 0;
+      }
+      localStorage.setItem('tg_click_count', currentCount);
+      counterDisplay.innerText = currentCount;
     });
+
+    // 3. 5 Seconds Auto-Redirect Timer
+    setTimeout(function() {
+      window.location.href = telegramUrl;
+    }, 5000);
   </script>
 
 </body>
