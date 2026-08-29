@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ગુજરાતી વેપારી</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      
+      // Meta Pixel Initialization
+      fbq('init', '832572663183096');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" 
+           src="https://www.facebook.com/tr?id=832572663183096&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
     <style>
         * {
             box-sizing: border-box;
@@ -182,7 +204,8 @@
         <span class="stars">★★★★★</span> 4.9/5 (2340 Reviews)
     </div>
 
-    <a href="https://t.me/your_link" class="btn-telegram">Join Free Telegram Channel →</a>
+    <!-- Telegram Button 1 -->
+    <a href="https://t.me/+gTJjNwFB8YAzZjNl" class="btn-telegram telegram-btn-action" target="_blank">Join Free Telegram Channel →</a>
 
     <div class="stats-grid">
         <div class="stat-item">
@@ -210,7 +233,8 @@
         <div class="feature-item">👥 50,000+ Subscribers Community</div>
     </div>
 
-    <a href="https://t.me/your_link" class="btn-telegram">Join Free Telegram Channel →</a>
+    <!-- Telegram Button 2 -->
+    <a href="https://t.me/+gTJjNwFB8YAzZjNl" class="btn-telegram telegram-btn-action" target="_blank">Join Free Telegram Channel →</a>
 
     <p class="disclaimer">
         <strong>Disclaimer:</strong> This channel is for educational purposes only. Trading involves market risk. Please consult your financial advisor before making investment decisions.
@@ -220,6 +244,17 @@
         <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Disclaimer</a>
     </div>
 </div>
+
+<!-- Telegram Button Click Event Tracking -->
+<script>
+  document.querySelectorAll('.telegram-btn-action').forEach(function(button) {
+    button.addEventListener('click', function() {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Subscribe');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
