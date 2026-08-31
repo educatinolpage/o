@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="gu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ગુજરાતી વેપારી</title>
+
+    <title>Gujarati Trader | Stock Market Education & Analysis</title>
+
+    <meta name="description"
+          content="Gujarati Trader provides educational stock market content, market analysis and NIFTY, BANKNIFTY and SENSEX updates.">
 
     <!-- Meta Pixel Code -->
     <script>
@@ -15,62 +19,52 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      
-      // Meta Pixel Initialization with New Pixel ID
+
       fbq('init', '1516206290551079');
       fbq('track', 'PageView');
     </script>
+
     <noscript>
-      <img height="1" width="1" style="display:none" 
+      <img height="1" width="1" style="display:none"
            src="https://www.facebook.com/tr?id=1516206290551079&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Meta Pixel Code -->
 
+
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
         }
 
         body {
-            background-color: #f4f7f9;
+            background: #f4f7f9;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 15px;
+            color: #1e293b;
         }
 
         .card-container {
             background: #ffffff;
             width: 100%;
-            max-width: 400px;
+            max-width: 430px;
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 22px;
             text-align: center;
-        }
-
-        .online-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background-color: #e8f5e9;
-            color: #2e7d32;
-            font-size: 12px;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-bottom: 15px;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            background-color: #4caf50;
-            border-radius: 50%;
         }
 
         .profile-img {
@@ -78,80 +72,58 @@
             height: 90px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 10px;
-            border: 3px solid #e0e0e0;
+            margin: 5px auto 14px;
+            border: 3px solid #e2e8f0;
         }
 
         .main-title {
-            font-size: 18px;
+            font-size: 21px;
             font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 4px;
+            color: #111827;
+            margin-bottom: 7px;
         }
 
         .sub-title {
-            font-size: 13px;
-            color: #d97706;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .rating {
-            font-size: 12px;
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .stars {
-            color: #f59e0b;
+            font-size: 14px;
+            color: #475569;
+            font-weight: 500;
+            margin-bottom: 18px;
+            line-height: 1.5;
         }
 
         .btn-telegram {
             display: block;
             width: 100%;
-            background-color: #0088cc;
+            background: #0088cc;
             color: #ffffff;
             text-decoration: none;
             font-size: 15px;
             font-weight: 600;
-            padding: 12px;
+            padding: 13px;
             border-radius: 8px;
-            margin-bottom: 15px;
-            transition: background 0.3s;
+            margin-bottom: 17px;
+            transition: background 0.2s;
         }
 
         .btn-telegram:hover {
-            background-color: #0077b5;
+            background: #0077b5;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 15px;
-            background: #f8fafc;
-            padding: 10px;
-            border-radius: 8px;
-        }
-
-        .stat-item h4 {
-            font-size: 16px;
-            color: #0284c7;
-        }
-
-        .stat-item p {
-            font-size: 11px;
-            color: #64748b;
+        .section-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 18px 0 10px;
         }
 
         .section-box {
             background: #f1f5f9;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
+            padding: 14px;
+            border-radius: 9px;
+            font-size: 14px;
+            line-height: 1.6;
             color: #334155;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .features-list {
@@ -160,100 +132,287 @@
         }
 
         .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
             font-size: 13px;
             color: #475569;
-            padding: 6px 0;
+            padding: 9px 0;
             border-bottom: 1px solid #f1f5f9;
         }
 
-        .disclaimer {
-            font-size: 10px;
-            color: #94a3b8;
-            margin-top: 15px;
-            line-height: 1.4;
-        }
-
-        .footer-links {
-            margin-top: 15px;
+        .disclosure {
+            text-align: left;
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            border-radius: 9px;
+            padding: 13px;
+            margin-top: 18px;
             font-size: 11px;
+            line-height: 1.55;
+            color: #7c2d12;
         }
 
-        .footer-links a {
-            color: #64748b;
-            text-decoration: none;
-            margin: 0 5px;
+        .info-box {
+            text-align: left;
+            margin-top: 15px;
+            padding: 12px;
+            background: #f8fafc;
+            border-radius: 8px;
+            font-size: 11px;
+            line-height: 1.6;
+            color: #475569;
         }
+
+        .policy-section {
+            text-align: left;
+            margin-top: 18px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .policy-section h3 {
+            font-size: 14px;
+            margin-bottom: 7px;
+            color: #1e293b;
+        }
+
+        .policy-section p {
+            font-size: 10px;
+            line-height: 1.55;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            margin-top: 18px;
+            font-size: 10px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
     </style>
 </head>
+
+
 <body>
 
 <div class="card-container">
-    <div class="online-badge">
-        <span class="dot"></span> 5,947 Traders Online Now
-    </div>
 
-    <img src="WhatsApp Image 2026-07-21 at 8.17.06 PM.jpeg" alt="Profile" class="profile-img">
+    <!-- Logo -->
+    <img
+        src="WhatsApp Image 2026-07-21 at 8.17.06 PM.jpeg"
+        alt="Gujarati Trader Logo"
+        class="profile-img"
+    >
 
-    <h2 class="main-title">ગુજરાતી વેપારી (SEBI RAGISTRATION)</h2>
-    <p class="sub-title">🏆 India's No. 1 Stock Market Channel</p>
+    <!-- Main Heading -->
+    <h1 class="main-title">
+        ગુજરાતી વેપારી
+    </h1>
 
-    <div class="rating">
-        <span class="stars">★★★★★</span> 4.9/5 (2340 Reviews)
-    </div>
-
-    <!-- Telegram Button 1 -->
-    <a href="https://t.me/+gTJjNwFB8YAzZjNl" class="btn-telegram telegram-btn-action" target="_blank">Join Free Telegram Channel →</a>
-
-    <div class="stats-grid">
-        <div class="stat-item">
-            <h4>50K+</h4>
-            <p>Members</p>
-        </div>
-        <div class="stat-item">
-            <h4>5+</h4>
-            <p>Years</p>
-        </div>
-        <div class="stat-item">
-            <h4>95%</h4>
-            <p>Accuracy</p>
-        </div>
-    </div>
-
-    <div class="section-box">
-        Get FREE Daily Calls<br>
-        <span style="font-weight: normal; font-size: 11px;">for NIFTY, BANKNIFTY & SENSEX</span>
-    </div>
-
-    <div class="features-list">
-        <div class="feature-item">📊 Daily Nifty & BankNifty Levels</div>
-        <div class="feature-item">🎓 Educational Market Analysis</div>
-        <div class="feature-item">👥 50,000+ Subscribers Community</div>
-    </div>
-
-    <!-- Telegram Button 2 -->
-    <a href="https://t.me/+gTJjNwFB8YAzZjNl" class="btn-telegram telegram-btn-action" target="_blank">Join Free Telegram Channel →</a>
-
-    <p class="disclaimer">
-        <strong>Disclaimer:</strong> This channel is for educational purposes only. Trading involves market risk. Please consult your financial advisor before making investment decisions.
+    <p class="sub-title">
+        Stock Market Education & Market Analysis
     </p>
 
-    <div class="footer-links">
-        <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Disclaimer</a>
+
+    <!-- Telegram CTA -->
+    <a
+        href="https://t.me/+gTJjNwFB8YAzZjNl"
+        class="btn-telegram telegram-btn-action"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Join Free Telegram Channel →
+    </a>
+
+
+    <!-- About -->
+    <h2 class="section-title">
+        Learn & Follow Market Updates
+    </h2>
+
+    <div class="section-box">
+        Get free educational content and market analysis
+        related to NIFTY, BANKNIFTY and SENSEX.
     </div>
+
+
+    <!-- Features -->
+    <div class="features-list">
+
+        <div class="feature-item">
+            📊 NIFTY & BANKNIFTY Market Analysis
+        </div>
+
+        <div class="feature-item">
+            📈 Educational Technical Analysis
+        </div>
+
+        <div class="feature-item">
+            📚 Stock Market Learning Content
+        </div>
+
+        <div class="feature-item">
+            📰 Regular Market Updates
+        </div>
+
+    </div>
+
+
+    <!-- Second CTA -->
+    <a
+        href="https://t.me/+gTJjNwFB8YAzZjNl"
+        class="btn-telegram telegram-btn-action"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Join Free Telegram Channel →
+    </a>
+
+
+    <!-- IMPORTANT FINANCIAL DISCLOSURE -->
+    <div class="disclosure">
+
+        <strong>Financial Disclosure</strong><br><br>
+
+        Gujarati Trader provides educational and informational
+        content related to financial markets.
+
+        The information provided on this website and Telegram
+        channel should not be considered personalized investment,
+        financial or trading advice.
+
+        Trading and investing involve market risks. Past
+        performance does not guarantee future results.
+
+        Please make your own decisions after considering your
+        financial situation and risk tolerance.
+
+    </div>
+
+
+    <!-- BUSINESS INFORMATION -->
+    <div class="info-box">
+
+        <strong>Business Information</strong><br><br>
+
+        <strong>Business Name:</strong>
+        Gujarati Trader<br>
+
+        <strong>Business Address:</strong>
+        YOUR BUSINESS ADDRESS<br>
+
+        <strong>Email:</strong>
+        YOUR EMAIL ADDRESS<br>
+
+        <strong>Telegram Channel:</strong>
+        Free to join<br>
+
+        <strong>Fees:</strong>
+        No fee is charged for joining the Telegram channel.
+
+    </div>
+
+
+    <!-- Privacy Policy -->
+    <div class="policy-section" id="privacy">
+
+        <h3>Privacy Policy</h3>
+
+        <p>
+            We respect your privacy. This website may use
+            analytics and advertising technologies such as Meta
+            Pixel to understand website visits and improve
+            advertising performance.
+
+            We do not request sensitive financial information
+            through this website.
+        </p>
+
+    </div>
+
+
+    <!-- Terms -->
+    <div class="policy-section" id="terms">
+
+        <h3>Terms & Conditions</h3>
+
+        <p>
+            By using this website or joining our Telegram channel,
+            you agree that the information provided is for
+            educational and informational purposes only.
+
+            Users are responsible for their own financial and
+            investment decisions.
+        </p>
+
+    </div>
+
+
+    <!-- Disclaimer -->
+    <div class="policy-section" id="disclaimer">
+
+        <h3>Disclaimer</h3>
+
+        <p>
+            Financial markets involve risk. No information on this
+            website should be interpreted as a guarantee of profit,
+            return or trading success.
+
+            We do not guarantee the accuracy or profitability of
+            any market view, analysis or information.
+        </p>
+
+    </div>
+
+
+    <!-- Contact -->
+    <div class="policy-section">
+
+        <h3>Contact Us</h3>
+
+        <p>
+            For questions regarding this website or our services,
+            contact us at:
+            <br><br>
+            <strong>YOUR EMAIL ADDRESS</strong>
+        </p>
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+
+        © 2026 Gujarati Trader. All rights reserved.
+
+        <br><br>
+
+        Educational content only. Market investments are subject
+        to risk.
+
+    </div>
+
 </div>
 
-<!-- Telegram Button Click Event Tracking -->
+
+<!-- Meta Pixel Telegram Click Tracking -->
 <script>
-  document.querySelectorAll('.telegram-btn-action').forEach(function(button) {
-    button.addEventListener('click', function() {
-      if (typeof fbq === 'function') {
-        fbq('track', 'Subscribe');
-      }
-    });
-  });
+
+    document
+        .querySelectorAll('.telegram-btn-action')
+        .forEach(function(button) {
+
+            button.addEventListener('click', function() {
+
+                if (typeof fbq === 'function') {
+
+                    fbq('track', 'Lead');
+
+                }
+
+            });
+
+        });
+
 </script>
 
 </body>
