@@ -291,13 +291,15 @@
 
 </div>
 
-<!-- Meta Pixel Telegram Click Tracking -->
+<!-- Meta Pixel Telegram Click Tracking (Optimized with Beacon) -->
 <script>
     document
         .querySelectorAll('.telegram-btn-action')
         .forEach(function(button) {
             button.addEventListener('click', function() {
                 if (typeof fbq === 'function') {
+                    // Prevent network request drop/bounce on redirection
+                    fbq('set', 'transport', 'beacon', 'https://connect.facebook.net');
                     fbq('track', 'Subscribe');
                 }
             });
