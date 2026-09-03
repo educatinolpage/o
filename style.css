@@ -1,9 +1,16 @@
-  /* Reset Base Styles */
-* {
+/* Reset Base Styles */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,22 +21,23 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 10px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Mobile-friendly Container with Gold Border */
 .page-container {
     width: 100%;
-    max-width: 450px; /* Mobile width constraint */
+    max-width: 450px;
     background-color: #121212;
-    border: 2px solid #bba15c; /* Golden Border */
+    border: 2px solid #bba15c;
     border-radius: 30px;
     padding: 30px 20px;
     text-align: center;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-d700; /* Gold ring around logo */
-    overflow: hidden;/* Logo Circle styling */
+/* Logo Circle styling */
 .logo-section {
     display: flex;
     justify-content: center;
@@ -40,33 +48,20 @@ d700; /* Gold ring around logo */
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    border: 3px solid #ff
-    background-color: #023020; /* Dark green background like image */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Logo Circle Box Styling */
-.logo-circle {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border: 3px solid #ffd700; /* Gold ring */
-    overflow: hidden; /* Yeh circle se bahar jaane waale parts ko chupa dega */
+    border: 3px solid #ffd700;
+    overflow: hidden;
     background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Image to perfectly fit in the circle */
 .logo-circle img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Isse image bina kote ya khinche poori tarah circle ko fill kar degi */
-    object-position: center; /* Image ka center part focus mein rahega */
-};
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 /* Title Section with Crowns */
@@ -80,7 +75,7 @@ d700; /* Gold ring around logo */
 
 .title-section h1 {
     font-size: 26px;
-    color: #f3c623; /* Bright Yellow/Gold */
+    color: #f3c623;
     font-weight: bold;
     text-transform: lowercase;
 }
@@ -109,7 +104,7 @@ d700; /* Gold ring around logo */
 }
 
 .members-badge span {
-    color: #00ff88; /* Green number */
+    color: #00ff88;
     font-weight: bold;
 }
 
@@ -144,8 +139,9 @@ d700; /* Gold ring around logo */
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 25px;
-    box-shadow: 0px 0px 20px rgba(0, 162, 255, 0.6); /* Glow Effect */
-    transition: transform 0.2s;
+    box-shadow: 0px 0px 20px rgba(0, 162, 255, 0.6);
+    transition: transform 0.2s ease;
+    will-change: transform;
 }
 
 .telegram-btn:active {
@@ -178,7 +174,7 @@ d700; /* Gold ring around logo */
 }
 
 .check-icon {
-    color: #00ff88; /* Green tick mark */
+    color: #00ff88;
     font-weight: bold;
     margin-right: 12px;
     font-size: 18px;
